@@ -1,0 +1,7 @@
+Sub Autofitcolumn()
+
+Dim Sheet As Worksheet 
+For Each Sheet In ThisWorkbook.Worksheets
+sheet.cells.EntireColumn.Autofit
+Next Sheet
+End Sub

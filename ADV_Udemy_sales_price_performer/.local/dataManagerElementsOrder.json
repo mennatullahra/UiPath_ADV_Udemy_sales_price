@@ -1,0 +1,332 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_reporting&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_extractedDatatable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_dt_reporting",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/LogInToContactcars.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/LogInToContactcars.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequence_name&TryCatch_3",
+        "str_sequence_name&TryCatch_4",
+        "bool_loggedin&Sequence_21",
+        "str_loggedin&Sequence_21",
+        "variable1&Sequence_22",
+        "bool_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SeachCars.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequence_name&Sequence_1",
+        "bool_exist&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "dt_attachment_content&Sequence_15",
+        "dt_extract_datatable&Sequence_16"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItemSrch",
+        "in_ConfigSearch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/ScrappingResults.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequenceName&TryCatch_1",
+        "str_results_number&Sequence_12",
+        "str_pattern&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dt_ExtractDataTable",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/ExcelRepoting.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_TransactionItem",
+        "in_dt_reporting"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SendEmails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Lst_mails&Sequence_5",
+        "str_sequence_name&Sequence_1",
+        "bool_exists&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/LogInToUdemy.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequenceName&TryCatch_4",
+        "str_sequenceName&TryCatch_3",
+        "bool_exists&Sequence_1",
+        "str_getCredential_username&Sequence_1",
+        "SecStr_getCredential_password&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/SearchCourses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequenceName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigSearch",
+        "in_TransactionItemSrch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/ScrappingResults(Autosaved).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequence_name&Sequence_1",
+        "str_pattern&Sequence_1",
+        "str_results_number&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_dt_extract_datatable"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/checkingPrices.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequenceName&TryCatch_2",
+        "str_results_number&Sequence_41",
+        "str_pattern&Sequence_41"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_reporting",
+        "in_Config",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "PreprocessingDatatable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequence_name&TryCatch_1",
+        "str_results_number&Sequence_2",
+        "str_pattern&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_dt_ExtractDataTable"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/PreprocessingDatatable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_sequenceName&TryCatch_1",
+        "str_status&Sequence_6",
+        "str_Cost&Sequence_6",
+        "bool_IsCourse&Sequence_3",
+        "str_rating&Sequence_3",
+        "str_InstructorName&Sequence_3",
+        "str_CourseDes&Sequence_3",
+        "str_CourseName&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dt_reporting",
+        "in_dt_ExtractDataTable",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
