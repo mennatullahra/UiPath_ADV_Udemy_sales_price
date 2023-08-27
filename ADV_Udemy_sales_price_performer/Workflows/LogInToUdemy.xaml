@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>686,5950</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>686,4377</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LogInToContactcars_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="log in to contactcars using gmail using credentials" DisplayName="LogInToUdemy" sap:VirtualizedContainerService.HintSize="696,5885" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="log in to contactcars using gmail using credentials" DisplayName="LogInToUdemy" sap:VirtualizedContainerService.HintSize="696,4312" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_exists" />
       <Variable x:TypeArguments="x:String" Name="str_getCredential_username" />
@@ -117,14 +117,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,5743" sap2010:WorkflowViewState.IdRef="Sequence_32">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,4170" sap2010:WorkflowViewState.IdRef="Sequence_32">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch - log out" sap:VirtualizedContainerService.HintSize="572,1882" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <TryCatch DisplayName="Try Catch - log out" sap:VirtualizedContainerService.HintSize="572,309" sap2010:WorkflowViewState.IdRef="TryCatch_3">
         <TryCatch.Variables>
           <Variable x:TypeArguments="x:String" Default="LogoutofUdemy" Name="str_sequenceName" />
         </TryCatch.Variables>
@@ -138,7 +138,8 @@
           <Sequence sap:VirtualizedContainerService.HintSize="534,1654" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Sequence sap2010:Annotation.AnnotationText="check if user not signed out" DisplayName="pre-condition" sap:VirtualizedContainerService.HintSize="472,249" sap2010:WorkflowViewState.IdRef="Sequence_23">
@@ -148,12 +149,9 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists- login button" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4" Result="{x:Null}">
+              <ui:UiElementExists DisplayName="Element Exists- login button" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="424234ad-4080-4a2f-8c33-657e6c5eaf00" InformativeScreenshot="dd59ae043be8756ef5ab1390582ec1f2" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl aaname='Log in' tag='SPAN' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="424234ad-4080-4a2f-8c33-657e6c5eaf00" InformativeScreenshot="dd59ae043be8756ef5ab1390582ec1f2" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl aaname='Log in' tag='SPAN' /&gt;" TimeoutMS="5000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
@@ -207,9 +205,9 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <ui:Activate ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Activate_1">
+                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Activate_1">
                       <ui:Activate.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f3d12f3-4dd7-4651-b065-2001a41b4207" InformativeScreenshot="a4789e8442bc4662fac363a2d509190b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Online Courses - Learn Anything, On Your Schedule | Udemy - Goog*' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f3d12f3-4dd7-4651-b065-2001a41b4207" InformativeScreenshot="a4789e8442bc4662fac363a2d509190b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -219,7 +217,7 @@
                         </ui:Target>
                       </ui:Activate.Target>
                     </ui:Activate>
-                    <ui:Hover ContinueOnError="False" CursorMotionType="Smooth" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover " sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Hover_2" SendWindowMessages="True" SimulateHover="True">
+                    <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" ContinueOnError="True" CursorMotionType="Smooth" DisplayName="Hover " sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Hover_2" SendWindowMessages="True" SimulateHover="True">
                       <ui:Hover.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -231,14 +229,10 @@
                         </ui:CursorPosition>
                       </ui:Hover.CursorPosition>
                       <ui:Hover.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7fe7941a-81cb-4b69-80e4-3da1b52f59ee" InformativeScreenshot="f44d05aa90d6cd75fcd921b0424f6cd7" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl tag='DIV' aaname='??' class='user-profile-dropdown-module--dropdown-button-avatar--2jhme ud-avatar ud-heading-sm' /&gt;" WaitForReady="NONE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7fe7941a-81cb-4b69-80e4-3da1b52f59ee" InformativeScreenshot="f44d05aa90d6cd75fcd921b0424f6cd7" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl tag='DIV' aaname='??' class='user-profile-dropdown-module--dropdown-button-avatar--2jhme ud-avatar ud-heading-sm' /&gt;" TimeoutMS="5000" WaitForReady="NONE" />
                       </ui:Hover.Target>
                     </ui:Hover>
-                    <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click - log out" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True" UnblockInput="{x:Null}">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - log out" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -250,10 +244,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bff57fe0-178c-4039-84d9-ea79fac6beb4" InformativeScreenshot="85a5b1a304dd633ae06ba09a9f25005d" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl tag='div' aaname='Log out' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bff57fe0-178c-4039-84d9-ea79fac6beb4" InformativeScreenshot="85a5b1a304dd633ae06ba09a9f25005d" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl tag='div' aaname='Log out' /&gt;" TimeoutMS="5000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
@@ -267,7 +258,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="538,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -317,7 +308,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists- login button" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6" Result="{x:Null}">
+              <ui:UiElementExists DisplayName="Element Exists- login button" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="424234ad-4080-4a2f-8c33-657e6c5eaf00" InformativeScreenshot="dd59ae043be8756ef5ab1390582ec1f2" Selector="&lt;html app='chrome.exe' title='*Udemy*' url='https://www.udemy.com/*' /&gt;&lt;webctrl aaname='Log in' tag='SPAN' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -378,7 +369,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Log in" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Log in" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -406,7 +397,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:Click>
-              <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists -Reenter username" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_7" Result="{x:Null}">
+              <ui:UiElementExists DisplayName="Element Exists -Reenter username" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c5c26f8-d457-4f68-91ad-dd69753847bc" InformativeScreenshot="3b6deced313dbc17ede4108577b598ba" Selector="&lt;html app='chrome.exe' title='*Udemy' /&gt;&lt;webctrl aaname='Log in to a different account' tag='A' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -432,7 +423,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="True" UnblockInput="{x:Null}">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -466,8 +457,8 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:GetRobotCredential AssetName="user_credentials_udemy" CacheStrategy="None" DisplayName="Get Credential" FolderPath="mennarashedae@outlook.com's workspace" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SecStr_getCredential_password]" TimeoutMS="{x:Null}" Username="[str_getCredential_username]" />
-              <ui:TypeInto Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into Email" EmptyField="True" sap:VirtualizedContainerService.HintSize="410,155" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="{x:Null}" SimulateType="True" Text="[str_getCredential_username]">
+              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="user_credentials_udemy" CacheStrategy="None" DisplayName="Get Credential" FolderPath="mennarashedae@outlook.com's workspace" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SecStr_getCredential_password]" Username="[str_getCredential_username]" />
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into Email" EmptyField="True" sap:VirtualizedContainerService.HintSize="410,155" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[str_getCredential_username]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46554d8e-c1fa-47a5-b58e-2d881b7c3b58" InformativeScreenshot="7a21716e11a1ffb968c015e72df7149f" Selector="&lt;html app='chrome.exe' title='*Udemy' /&gt;&lt;webctrl innertext='Email' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -479,7 +470,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:TypeSecureText Activate="True" AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Secure Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[SecStr_getCredential_password]" SendWindowMessages="{x:Null}" SimulateType="True">
+              <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Secure Password" EmptyField="True" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[SecStr_getCredential_password]" SimulateType="True">
                 <ui:TypeSecureText.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b5a7c65-46f3-468c-adc4-d5738a269ae1" InformativeScreenshot="ffb6340412873ccdee55af07cf0b4a7f" Selector="&lt;html app='chrome.exe' title='*Udemy' /&gt;&lt;webctrl innertext='Password' tag='DIV' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -491,7 +482,7 @@
                   </ui:Target>
                 </ui:TypeSecureText.Target>
               </ui:TypeSecureText>
-              <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click Login BUTTON" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Login BUTTON" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -520,7 +511,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:UiElementExists ContinueOnError="{x:Null}" DisplayName="Element Exists wrong password" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_8" Result="{x:Null}">
+              <ui:UiElementExists DisplayName="Element Exists wrong password" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16fb980d-fcbc-490d-8bb4-6c50639104bd" InformativeScreenshot="98270fb4556a2e52372a495a1d2d52c4" Selector="&lt;html app='chrome.exe' title='Log In and Start Learning | Udemy' /&gt;&lt;webctrl class='ud-heading-md' tag='H2' /&gt;">
                     <ui:Target.TimeoutMS>

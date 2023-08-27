@@ -90,8 +90,6 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "int_counter&Sequence_1",
-        "i&Sequence_2",
-        "str_sender&Sequence_2",
         "str_excel_file&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [

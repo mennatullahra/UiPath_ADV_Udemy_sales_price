@@ -12,7 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_reporting&StateMachine_1",
+        "dt_reportingNotValidCourses&Sequence_28",
         "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
@@ -24,6 +24,7 @@
         "TransactionID&StateMachine_1",
         "dt_TransactionData&StateMachine_1",
         "ConsecutiveSystemExceptions&StateMachine_1",
+        "dt_reporting&StateMachine_1",
         "ShouldStop&Sequence_25"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -53,9 +54,13 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_GatePreprocessing&Sequence_1",
+        "bool_GateScrapping&Sequence_1",
+        "str_filePath&Sequence_1",
         "dt_extractedDatatable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_dt_reportingNotValidCourses",
         "in_TransactionNumber",
         "in_dt_reporting",
         "in_TransactionItem",
@@ -185,6 +190,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "in_dt_reportingNotValidCourses",
+        "out_str_filePath",
         "in_TransactionNumber",
         "in_TransactionItem",
         "in_dt_reporting"
@@ -201,6 +208,7 @@
         "bool_exists&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_str_filePath",
         "in_TransactionNumber",
         "in_TransactionItem",
         "in_Config"
@@ -280,12 +288,20 @@
       "Path": "Workflows/checkingPrices.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_sequenceName&TryCatch_2",
-        "str_results_number&Sequence_41",
-        "str_pattern&Sequence_41"
+        "str_results_number&Sequence_48",
+        "str_pattern&Sequence_48",
+        "str_sequenceName&TryCatch_2"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_dt_reporting",
+        "in_str_ProductPopulacrity",
+        "io_dt_reporting",
+        "io_dt_reportingNotValidCourses",
+        "in_str_rate",
+        "in_str_description",
+        "in_str_courseName",
+        "in_str_instructor",
+        "in_str_status",
+        "in_str_cost",
         "in_Config",
         "in_TransactionItem"
       ],
@@ -311,6 +327,7 @@
       "Path": "Workflows/PreprocessingDatatable.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_ProductPopularity&Sequence_6",
         "str_sequenceName&TryCatch_1",
         "str_status&Sequence_6",
         "str_Cost&Sequence_6",
@@ -321,6 +338,8 @@
         "str_CourseName&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [
+        "io_dt_reportingNotValidCourses",
+        "in_TransactionItem",
         "io_dt_reporting",
         "in_dt_ExtractDataTable",
         "in_Config"
