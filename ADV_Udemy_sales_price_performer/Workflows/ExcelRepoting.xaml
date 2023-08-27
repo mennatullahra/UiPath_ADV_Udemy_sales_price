@@ -99,6 +99,9 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Reporting the results of the website's cars in an Excel sheet." DisplayName="ExcelRepoting" sap:VirtualizedContainerService.HintSize="646,1278" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -118,8 +121,8 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Cost" DataTable="[in_dt_reporting]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="484,80" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[in_dt_reporting]" SortOrder="Ascending" />
-          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reporting]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="484,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data" WorkbookPath="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Output\&quot; &amp; in_TransactionItem.SpecificContent(&quot;SenderEmail&quot;).ToString &amp; in_TransactionNumber &amp; &quot;.xlsx&quot;]" />
-          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - autofit columns" sap:VirtualizedContainerService.HintSize="484,340" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Output\&quot; &amp; in_TransactionItem.SpecificContent(&quot;SenderEmail&quot;).ToString &amp; in_TransactionNumber &amp; &quot;.xlsx&quot;]">
+          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reporting]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="484,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data" WorkbookPath="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Output\&quot; &amp; Now.ToString.Substring(11).Replace(&quot;:&quot;,&quot;-&quot;) &amp; &quot;-&quot; &amp; in_TransactionNumber &amp; &quot;.xlsx&quot;]" />
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - autofit columns" sap:VirtualizedContainerService.HintSize="484,340" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Output\&quot; &amp; Now.ToString.Substring(11).Replace(&quot;:&quot;,&quot;-&quot;) &amp; &quot;-&quot; &amp; in_TransactionNumber &amp; &quot;.xlsx&quot;]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
