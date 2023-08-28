@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>789,3042</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>789,4040</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PreprocessingDatatable_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Gathering information such as the name, description, price, and instructor's name and organizing them neatly into separate columns." DisplayName="PreprocessingDatatable" sap:VirtualizedContainerService.HintSize="799,2977" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Gathering information such as the name, description, price, and instructor's name and organizing them neatly into separate columns." DisplayName="PreprocessingDatatable" sap:VirtualizedContainerService.HintSize="799,3975" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,7 +115,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch sap2010:Annotation.AnnotationText="" DisplayName="Try Catch get details" sap:VirtualizedContainerService.HintSize="737,2743" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="" DisplayName="Try Catch get details" sap:VirtualizedContainerService.HintSize="737,3741" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="Try Catch get details" Name="str_sequenceName" />
       </TryCatch.Variables>
@@ -127,20 +127,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="634,1412" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="699,3438" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ExtractDataTable]" DisplayName="For Each Row in Data Table " sap:VirtualizedContainerService.HintSize="572,682" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ExtractDataTable]" DisplayName="For Each Row in Data Table " sap:VirtualizedContainerService.HintSize="637,2708" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="538,496" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="603,2522" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="str_CourseName" />
                     <Variable x:TypeArguments="x:String" Name="str_CourseDes" />
@@ -153,7 +153,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap2010:Annotation.AnnotationText="Checking if this is a course or an advertisement." DisplayName="pre-condition" sap:VirtualizedContainerService.HintSize="496,316" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence sap2010:Annotation.AnnotationText="Checking if this is a course or an advertisement." DisplayName="pre-condition" sap:VirtualizedContainerService.HintSize="561,904" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -169,10 +169,10 @@
                         <InArgument x:TypeArguments="x:Boolean">[CurrentRow("Course").ToString.Contains("E£") AND Not (CurrentRow("Course").ToString.Contains("Hot and Fresh Courses"))]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[bool_IsCourse]" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[bool_IsCourse]" sap:VirtualizedContainerService.HintSize="434,640" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -194,16 +194,16 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="300,140" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,52" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;LogMessage_PreConditionFalsebranch&quot;).ToString &amp; str_sequenceName]">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_Config(&quot;LogMessage_PreConditionFalsebranch&quot;).ToString &amp; str_sequenceName]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -212,21 +212,21 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <If Condition="[bool_IsCourse]" sap:VirtualizedContainerService.HintSize="496,52" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If Condition="[bool_IsCourse]" sap:VirtualizedContainerService.HintSize="561,1490" sap2010:WorkflowViewState.IdRef="If_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="527,1339" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence sap:VirtualizedContainerService.HintSize="527,1308" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence sap2010:Annotation.AnnotationText="Gathering information." DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="485,1251" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence sap2010:Annotation.AnnotationText="Gathering information." DisplayName="Preprocessing" sap:VirtualizedContainerService.HintSize="485,1220" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="str_Cost" />
                             <Variable x:TypeArguments="x:String" Name="str_status" />
@@ -245,8 +245,8 @@
                           <ui:Matches BuilderPattern="out of 5\n[1-9](\.[1-9])?" DisplayName="Patterns - rating (after &quot;out of 5&quot;)" FirstMatch="[str_rating]" sap:VirtualizedContainerService.HintSize="423,60" sap2010:WorkflowViewState.IdRef="Matches_4" Input="[CurrentRow(&quot;Course&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;out of 5\\n[1-9](\\.[1-9])?&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="out of 5\n[1-9](\.[1-9])?" RegexOption="IgnoreCase, Compiled" />
                           <ui:Matches BuilderPattern="Current (P|p)rice\n(E£([1-9]{0,3}\,?)*(\.[1-9]{2})*|Free)" DisplayName="Patterns - Cost (after &quot;Current price:&quot;)" FirstMatch="[str_Cost]" sap:VirtualizedContainerService.HintSize="423,60" sap2010:WorkflowViewState.IdRef="Matches_5" Input="[CurrentRow(&quot;Course&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;Current (P|p)rice\\n(E£([1-9]{0,3}\\,?)*(\\.[1-9]{2})*|Free)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="Current (P|p)rice\n(E£([1-9]{0,3}\,?)*(\.[1-9]{2})*|Free)" RegexOption="IgnoreCase, Compiled" />
                           <ui:Matches BuilderPattern="(lectures|questions)\n.*" DisplayName="Find Matching Patterns" FirstMatch="[str_status]" sap:VirtualizedContainerService.HintSize="423,60" sap2010:WorkflowViewState.IdRef="Matches_6" Input="[CurrentRow(&quot;Course&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;(lectures|questions)\\n.*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(lectures|questions)\n.*" RegexOption="IgnoreCase, Compiled" />
-                          <ui:Matches BuilderPattern="(All Levels|Beginner|Intermediate|Expert)\n.*" DisplayName="Find Matching Patterns" FirstMatch="[str_ProductPopularity]" sap:VirtualizedContainerService.HintSize="423,60" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[CurrentRow(&quot;Course&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;(All Levels|Beginner|Intermediate|Expert)\\n.*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(All Levels|Beginner|Intermediate|Expert)\n.*" RegexOption="IgnoreCase, Compiled" />
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,256" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:Matches BuilderPattern="(Bestseller|New|Highest rated)" DisplayName="Find Matching Patterns" FirstMatch="[str_ProductPopularity]" sap:VirtualizedContainerService.HintSize="423,60" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[CurrentRow(&quot;Course&quot;).ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;(Bestseller|New|Highest rated)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(Bestseller|New|Highest rated)" RegexOption="IgnoreCase, Compiled" />
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,225" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -292,30 +292,44 @@ Instructor","")]</InArgument>
                                     <InArgument x:TypeArguments="x:String">[Regex.Replace(str_status,"(lectures|questions)\n","")]</InArgument>
                                   </ui:AssignOperation.Value>
                                 </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[str_ProductPopularity]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[Regex.Replace(str_ProductPopularity, "(All Levels|Beginner|Intermediate|Expert)","")]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="checkingPrices.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="423,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\checkingPrices.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                              <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_cost">[str_Cost]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_status">[str_status]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_instructor">[str_InstructorName]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_courseName">[str_CourseName]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_description">[str_CourseDes]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_rate">[str_rating]</InArgument>
-                              <InArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_reportingNotValidCourses">[io_dt_reportingNotValidCourses]</InArgument>
-                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_reporting">[io_dt_reporting]</InOutArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_str_ProductPopulacrity">[str_ProductPopularity]</InArgument>
+                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
+                                <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_cost">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Cost" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_status">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_status" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_instructor">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_InstructorName" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_courseName">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CourseName" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_description">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_CourseDes" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_rate">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_rating" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_reportingNotValidCourses">
+                                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="io_dt_reportingNotValidCourses" />
+                              </InArgument>
+                              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_reporting">
+                                <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="io_dt_reporting" />
+                              </InOutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_str_ProductPopulacrity">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_ProductPopularity" />
+                              </InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </Sequence>
@@ -335,7 +349,7 @@ Instructor","")]</InArgument>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <Sequence sap2010:Annotation.AnnotationText="Check as a post-condition that the datatable length is not 0; if it is, throw a Business Exception indicating that the course doesn't have results in the specified range on the Udemy website." DisplayName="Post-Condition" sap:VirtualizedContainerService.HintSize="572,579" sap2010:WorkflowViewState.IdRef="Sequence_21">
+          <Sequence sap2010:Annotation.AnnotationText="Check as a post-condition that the datatable length is not 0; if it is, throw a Business Exception indicating that the course doesn't have results in the specified range on the Udemy website." DisplayName="Post-Condition" sap:VirtualizedContainerService.HintSize="637,579" sap2010:WorkflowViewState.IdRef="Sequence_21">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>611,1517</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>611,1547</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CloseAllApplications_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,7 +96,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="512,1452" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="512,1482" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,7 +104,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="450,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="log out." DisplayName="log out" sap:VirtualizedContainerService.HintSize="450,543" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="log out." DisplayName="log out" sap:VirtualizedContainerService.HintSize="450,396" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,18 +112,6 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Activate_1">
-        <ui:Activate.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f3d12f3-4dd7-4651-b065-2001a41b4207" InformativeScreenshot="a4789e8442bc4662fac363a2d509190b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Online Courses - Learn Anything, On Your Schedule | Udemy - Goog*' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:Activate.Target>
-      </ui:Activate>
       <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" ContinueOnError="True" CursorMotionType="Smooth" DisplayName="Hover " sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Hover_1" SendWindowMessages="True" SimulateHover="True">
         <ui:Hover.CursorPosition>
           <ui:CursorPosition Position="Center">
@@ -168,12 +156,12 @@
       <ui:DeleteFileX DisplayName="Delete Temp File - Scraping gate" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Temp\&quot; &amp; &quot;ScrappingDataCheckPoint.xlsx&quot;]" />
       <ui:DeleteFileX DisplayName="Delete Temp File - Preprocessing gate" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[Directory.GetCurrentDirectory() &amp; &quot;\Data\Temp\&quot; &amp; &quot;ReportingDataCheckPoint.xlsx&quot;]" />
     </Sequence>
-    <TryCatch DisplayName="Try Catch - Kill Chrome" sap:VirtualizedContainerService.HintSize="450,184" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - Kill Chrome" sap:VirtualizedContainerService.HintSize="450,361" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Chrome" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome.exe" />
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

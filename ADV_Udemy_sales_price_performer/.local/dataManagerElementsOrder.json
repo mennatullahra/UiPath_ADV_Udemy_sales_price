@@ -191,10 +191,10 @@
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_dt_reportingNotValidCourses",
+        "in_dt_reporting",
         "out_str_filePath",
         "in_TransactionNumber",
-        "in_TransactionItem",
-        "in_dt_reporting"
+        "in_TransactionItem"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -288,11 +288,13 @@
       "Path": "Workflows/checkingPrices.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dbl_Cost&Sequence_53",
         "str_results_number&Sequence_48",
         "str_pattern&Sequence_48",
         "str_sequenceName&TryCatch_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_str_cost",
         "in_str_ProductPopulacrity",
         "io_dt_reporting",
         "io_dt_reportingNotValidCourses",
@@ -301,7 +303,6 @@
         "in_str_courseName",
         "in_str_instructor",
         "in_str_status",
-        "in_str_cost",
         "in_Config",
         "in_TransactionItem"
       ],
@@ -344,6 +345,14 @@
         "in_dt_ExtractDataTable",
         "in_Config"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Sequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

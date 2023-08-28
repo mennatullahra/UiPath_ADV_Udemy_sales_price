@@ -1,2 +1,2 @@
 course name: flutter
-price: 5000-15000
+price: 6000-15000

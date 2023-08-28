@@ -1,15 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ExcelRepoting" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_dt_reporting" Type="InArgument(sd:DataTable)" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
     <x:Property Name="out_str_filePath" Type="OutArgument(x:String)" />
+    <x:Property Name="in_dt_reporting" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_dt_reportingNotValidCourses" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>636,1585</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>611,1935</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExcelRepoting_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,34 +106,38 @@
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Reporting the results of the website's cars in an Excel sheet." DisplayName="ExcelRepoting" sap:VirtualizedContainerService.HintSize="646,1520" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Reporting the results of the website's cars in an Excel sheet." DisplayName="ExcelRepoting" sap:VirtualizedContainerService.HintSize="612,1870" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="584,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Excel reporting&quot;]" />
-    <TryCatch DisplayName="Try Catch Creating Excel sheet" sap:VirtualizedContainerService.HintSize="550,755" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="550,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Excel reporting&quot;]" />
+    <TryCatch DisplayName="Try Catch Creating Excel sheet" sap:VirtualizedContainerService.HintSize="550,1547" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Creating Excel Workbook" sap:VirtualizedContainerService.HintSize="512,527" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Creating Excel Workbook" sap:VirtualizedContainerService.HintSize="512,1319" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Sorting the data tables" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[in_dt_reporting.RowCount.ToString]" />
+          <Sequence DisplayName="Sorting the data tables" sap:VirtualizedContainerService.HintSize="450,311" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Cost" DataTable="[in_dt_reporting]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[in_dt_reporting]" SortOrder="Ascending" />
-            <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Cost" DataTable="[in_dt_reportingNotValidCourses]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Ascending" OutputDataTable="[in_dt_reporting]" SortOrder="Ascending" />
+            <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Cost" DataTable="[in_dt_reportingNotValidCourses]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="SortDataTable_2" Order="Ascending" OutputDataTable="[in_dt_reportingNotValidCourses]" SortOrder="Ascending" />
           </Sequence>
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[in_dt_reporting.RowCount.ToString]" />
           <Assign sap:VirtualizedContainerService.HintSize="450,82" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_str_filePath]</OutArgument>
@@ -142,25 +146,25 @@
               <InArgument x:TypeArguments="x:String">[Directory.GetCurrentDirectory() &amp; "\Data\Output\" &amp; Regex.Replace(Now.ToString,"(\/|\s|:)","-") &amp; "-" &amp; in_TransactionNumber &amp; ".xlsx"]</InArgument>
             </Assign.Value>
           </Assign>
-          <Sequence DisplayName="Creating Sheets" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Creating Sheets" sap:VirtualizedContainerService.HintSize="450,383" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reporting]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Valid" WorkbookPath="[out_str_filePath]">
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reporting]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Valid" WorkbookPath="[out_str_filePath]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WriteRange>
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reporting]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Not Valid" WorkbookPath="[out_str_filePath]">
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[in_dt_reportingNotValidCourses]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Not Valid" WorkbookPath="[out_str_filePath]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
