@@ -144,7 +144,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Element Exists- login button" Exists="[bool_exists]" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="424234ad-4080-4a2f-8c33-657e6c5eaf00" InformativeScreenshot="dd59ae043be8756ef5ab1390582ec1f2" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl aaname='Log in' tag='SPAN' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="424234ad-4080-4a2f-8c33-657e6c5eaf00" InformativeScreenshot="dd59ae043be8756ef5ab1390582ec1f2" Selector="&lt;html app='chrome.exe' title='*Udemy' url='https://www.udemy.com/' /&gt;&lt;webctrl aaname='Log in' tag='SPAN' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
             <If sap2010:Annotation.AnnotationText="If this button appears, it means that the account is logged out." Condition="[bool_exists]" sap:VirtualizedContainerService.HintSize="388,224" sap2010:WorkflowViewState.IdRef="If_10">
